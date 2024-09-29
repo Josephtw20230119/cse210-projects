@@ -24,20 +24,57 @@ class Program
         //Console.WriteLine(grade_percent);
         
         // get an appropriate letter grade and message
-        if (grade_percent >= 90) {
-           letter_grade = "A"; 
+        // A,A-,B+,B,B-,C+C,C-,D+D,D-,F
+        if (grade_percent >= 90 ) {
+           //letter_grade = "A"; 
+           //message = pass_message;
+           if (grade_percent >= 93) {
+                letter_grade = "A";
+           }
+           else
+           {
+             letter_grade = "A-";
+           }
            message = pass_message;
+           
         }
         else if (grade_percent <90 && grade_percent >= 80) {
-            letter_grade = "B";
+            if (grade_percent >= 87) {
+                letter_grade = "B+";
+           }
+           else if (grade_percent <= 82) {
+                letter_grade = "B-";
+           }
+           else 
+           {
+             letter_grade = "B";
+           }
             message = pass_message;
         }
         else if (grade_percent <80 && grade_percent >= 70) {
-            letter_grade = "C";
+            if (grade_percent >= 77) {
+                letter_grade = "C+";
+           }
+           else if (grade_percent <= 72) {
+                letter_grade = "C-";
+           }
+           else 
+           {
+             letter_grade = "C";
+           }
             message = pass_message;
         }
         else if (grade_percent <70 && grade_percent >= 60) {
-            letter_grade = "D";
+            if (grade_percent >= 67) {
+                letter_grade = "D+";
+           }
+           else if (grade_percent <= 62) {
+                letter_grade = "D-";
+           }
+           else 
+           {
+             letter_grade = "D";
+           }
             message = unpass_message;
         } 
         else if (grade_percent <60 ) {
@@ -53,3 +90,49 @@ class Program
         Console.WriteLine(message);
     }
 }
+
+
+/*
+switch (score)
+        {
+            // Handle multiple values in a single case block (ranges using multiple cases)
+            case int n when (n >= 90 && n <= 100):
+                Console.WriteLine("Grade: A");
+                break;
+            case int n when (n >= 80 && n < 90):
+                Console.WriteLine("Grade: B");
+                break;
+            case int n when (n >= 70 && n < 80):
+                Console.WriteLine("Grade: C");
+                break;
+            case int n when (n >= 60 && n < 70):
+                Console.WriteLine("Grade: D");
+                break;
+            case int n when (n >= 0 && n < 60):
+                Console.WriteLine("Grade: F");
+                break;
+            default:
+                Console.WriteLine("Invalid score");
+                break;switch (score)
+        {
+            // Handle multiple values in a single case block (ranges using multiple cases)
+            case int n when (n >= 90 && n <= 100):
+                Console.WriteLine("Grade: A");
+                break;
+            case int n when (n >= 80 && n < 90):
+                Console.WriteLine("Grade: B");
+                break;
+            case int n when (n >= 70 && n < 80):
+                Console.WriteLine("Grade: C");
+                break;
+            case int n when (n >= 60 && n < 70):
+                Console.WriteLine("Grade: D");
+                break;
+            case int n when (n >= 0 && n < 60):
+                Console.WriteLine("Grade: F");
+                break;
+            default:
+                Console.WriteLine("Invalid score");
+                break;
+
+*/
